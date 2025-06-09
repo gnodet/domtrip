@@ -229,6 +229,16 @@ public class Element extends ContainerNode {
         return result;
     }
 
+    /**
+     * Gets all attribute objects with their formatting information.
+     *
+     * @return a map of attribute names to Attribute objects
+     * @since 1.0
+     */
+    public Map<String, Attribute> getAttributeObjects() {
+        return new LinkedHashMap<>(attributes);
+    }
+
     public boolean hasAttribute(String name) {
         return attributes.containsKey(name);
     }
